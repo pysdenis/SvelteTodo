@@ -1,8 +1,6 @@
 <script>
 	import { createEventDispatcher } from "svelte";
 
-	// Export je sice reálná funkce JavaScriptu ale zde je to
-	// "zneužito" na určení "atributů" pro komponentu (viz Todos.svelte)
 	export let todo;
 	export let index;
 

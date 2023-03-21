@@ -1,9 +1,9 @@
 <script>
 	import { createEventDispatcher } from "svelte";
+
 	let text = "";
 	let deadline = "";
 
-	// https://svelte.dev/tutorial/component-events
 	const dispatch = createEventDispatcher();
 
 	function newTodo() {
@@ -12,7 +12,6 @@
 			return;
 		}
 
-		// Přes event "addTodo" pošlu data nového úkolu
 		dispatch("addTodo", {
 			text,
 			deadline,

@@ -13,7 +13,15 @@
 		const now = new Date();
 		const deadlineDate = new Date(deadline);
 		const timeDiff = deadlineDate.getTime() - now.getTime();
+		if(Math.ceil(timeDiff / (1000 * 60 * 60 * 24)) < 0) {
+			return `Jsi pozadu ${Math.ceil(timeDiff / (-1000 * 60 * 60 * 24))} dnů`
+		}
+		else if(Math.ceil(timeDiff / (1000 * 60 * 60 * 24)) == 0) {
+			return `Termín je dnes!`;
+		}
+		else {
 		return `${Math.ceil(timeDiff / (1000 * 60 * 60 * 24))} dnů`;
+		}
 	}
 
 	function removeFromList(index) {
